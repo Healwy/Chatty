@@ -1,3 +1,7 @@
+/*
+ * Copyright 2022 Healer Corporation.
+ */
+
 package com.xuniyishifanchen.chatty.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape

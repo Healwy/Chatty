@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2022 Healer Corporation.
+  -->
+
 <resources>
 
     <style name="Theme.Chatty" parent="android:Theme.Material.Light.NoActionBar">

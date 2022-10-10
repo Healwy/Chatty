@@ -1,3 +1,7 @@
+/*
+ * Copyright 2022 Healer Corporation.
+ */
+
 package com.xuniyishifanchen.chatty
 
 import android.os.Bundle
@@ -18,6 +22,8 @@ import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.xuniyishifanchen.chatty.ui.screens.AppScreen
 import com.xuniyishifanchen.chatty.ui.screens.login.Login
+import com.xuniyishifanchen.chatty.ui.screens.main.Main
+import com.xuniyishifanchen.chatty.ui.screens.register.Register
 import com.xuniyishifanchen.chatty.ui.screens.splash.Splash
 import com.xuniyishifanchen.chatty.ui.theme.ChattyTheme
 import com.xuniyishifanchen.chatty.ui.utils.HideIME
@@ -64,15 +70,18 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun ChattyNavHost(navController: NavHostController) {
-
     AnimatedNavHost(navController = navController, startDestination = AppScreen.splash) {
         composable(AppScreen.splash) {
             Splash()
         }
-
         composable(AppScreen.login) {
             Login()
         }
+        composable(AppScreen.main) {
+            Main()
+        }
+        composable(AppScreen.register) {
+            Register()
+        }
     }
-
 }

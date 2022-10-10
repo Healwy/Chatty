@@ -1,3 +1,12 @@
+<!--
+  ~ Copyright 2022 Healer Corporation.
+  -->
+
 <resources>
     <string name="app_name">Chatty</string>
+    <string name="chatty_string_user_name">用户名</string>
+    <string name="chatty_string_password">密码</string>
+    <string name="chatty_string_login">登录</string>
+    <string name="chatty_string_forget_password">忘记密码</string>
+    <string name="chatty_string_register">注册账号</string>
 </resources>
