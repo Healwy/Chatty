@@ -21,8 +21,8 @@ import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.xuniyishifanchen.chatty.ui.screens.AppScreen
+import com.xuniyishifanchen.chatty.ui.screens.home.Home
 import com.xuniyishifanchen.chatty.ui.screens.login.Login
-import com.xuniyishifanchen.chatty.ui.screens.main.Main
 import com.xuniyishifanchen.chatty.ui.screens.register.Register
 import com.xuniyishifanchen.chatty.ui.screens.splash.Splash
 import com.xuniyishifanchen.chatty.ui.theme.ChattyTheme
@@ -70,7 +70,7 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun ChattyNavHost(navController: NavHostController) {
-    AnimatedNavHost(navController = navController, startDestination = AppScreen.splash) {
+    AnimatedNavHost(navController = navController, startDestination = AppScreen.register) {
         composable(AppScreen.splash) {
             Splash()
         }
@@ -78,7 +78,7 @@ fun ChattyNavHost(navController: NavHostController) {
             Login()
         }
         composable(AppScreen.main) {
-            Main()
+            Home()
         }
         composable(AppScreen.register) {
             Register()
