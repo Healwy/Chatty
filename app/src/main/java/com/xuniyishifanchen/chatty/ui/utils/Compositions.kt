@@ -9,7 +9,7 @@ import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.navigation.NavHostController
 
-val LocalNavControl = compositionLocalOf<NavHostController> {
+val LocalNavController = compositionLocalOf<NavHostController> {
     error("CompositionLocal LocalNavControl not present")
 }
 

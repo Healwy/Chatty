@@ -27,7 +27,7 @@ import com.xuniyishifanchen.chatty.ui.screens.register.Register
 import com.xuniyishifanchen.chatty.ui.screens.splash.Splash
 import com.xuniyishifanchen.chatty.ui.theme.ChattyTheme
 import com.xuniyishifanchen.chatty.ui.utils.HideIME
-import com.xuniyishifanchen.chatty.ui.utils.LocalNavControl
+import com.xuniyishifanchen.chatty.ui.utils.LocalNavController
 import com.xuniyishifanchen.chatty.ui.utils.LocalOnBackPressedDispatcher
 
 @OptIn(ExperimentalAnimationApi::class)
@@ -56,7 +56,7 @@ class MainActivity : ComponentActivity() {
                 }
 
                 CompositionLocalProvider(
-                    LocalNavControl provides navController,
+                    LocalNavController provides navController,
                     LocalOnBackPressedDispatcher provides onBackPressedDispatcher
                 ) {
                     ChattyNavHost(navController)
@@ -70,7 +70,7 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun ChattyNavHost(navController: NavHostController) {
-    AnimatedNavHost(navController = navController, startDestination = AppScreen.register) {
+    AnimatedNavHost(navController = navController, startDestination = AppScreen.splash) {
         composable(AppScreen.splash) {
             Splash()
         }

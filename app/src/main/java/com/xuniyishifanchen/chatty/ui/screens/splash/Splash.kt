@@ -20,12 +20,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.xuniyishifanchen.chatty.R
 import com.xuniyishifanchen.chatty.ui.compoents.CenterRow
 import com.xuniyishifanchen.chatty.ui.screens.AppScreen
-import com.xuniyishifanchen.chatty.ui.utils.LocalNavControl
+import com.xuniyishifanchen.chatty.ui.utils.LocalNavController
 import kotlinx.coroutines.delay
 
 @Composable
 fun Splash() {
-    val navController = LocalNavControl.current
+    val navController = LocalNavController.current
 
     Box(
         modifier = Modifier.fillMaxSize(),

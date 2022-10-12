@@ -73,4 +73,7 @@ dependencies {
     def md3_version = "1.0.0-alpha15"
     implementation "androidx.compose.material3:material3:$md3_version"
     implementation "androidx.compose.material3:material3-window-size-class:$md3_version"
+
+    // coil
+    implementation "io.coil-kt:coil-compose:2.1.0"
 }

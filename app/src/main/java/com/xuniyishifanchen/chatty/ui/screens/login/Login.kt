@@ -42,13 +42,13 @@ import com.xuniyishifanchen.chatty.ui.compoents.CenterRow
 import com.xuniyishifanchen.chatty.ui.compoents.HorizontalSapcer
 import com.xuniyishifanchen.chatty.ui.compoents.VerticalSpacer
 import com.xuniyishifanchen.chatty.ui.screens.AppScreen
-import com.xuniyishifanchen.chatty.ui.utils.LocalNavControl
+import com.xuniyishifanchen.chatty.ui.utils.LocalNavController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Login() {
 
-    val navController = LocalNavControl.current
+    val navController = LocalNavController.current
 
     var userName by rememberSaveable { mutableStateOf("") }
     var password by rememberSaveable { mutableStateOf("") }
