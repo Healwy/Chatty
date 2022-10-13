@@ -8,6 +8,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
@@ -26,6 +28,7 @@ import com.xuniyishifanchen.chatty.ui.screens.login.Login
 import com.xuniyishifanchen.chatty.ui.screens.register.Register
 import com.xuniyishifanchen.chatty.ui.screens.splash.Splash
 import com.xuniyishifanchen.chatty.ui.theme.ChattyTheme
+import com.xuniyishifanchen.chatty.ui.theme.chattyColors
 import com.xuniyishifanchen.chatty.ui.utils.HideIME
 import com.xuniyishifanchen.chatty.ui.utils.LocalNavController
 import com.xuniyishifanchen.chatty.ui.utils.LocalOnBackPressedDispatcher
@@ -38,8 +41,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             ChattyTheme {
                 val systemUiController = rememberSystemUiController()
+                val useDarkIcons =
+                        !isSystemInDarkTheme() && MaterialTheme.chattyColors.isLight
                 SideEffect {
-                    systemUiController.setSystemBarsColor(Color.Transparent, false)
+                    systemUiController.setSystemBarsColor(Color.Transparent, useDarkIcons)
                 }
 
                 val navController = rememberAnimatedNavController()

@@ -38,7 +38,7 @@ fun Home() {
 
     ModalNavigationDrawer(
         drawerContent = {
-
+            PersonalProfile()
         },
         drawerState = drawerState
     ) {
@@ -56,7 +56,7 @@ fun Home() {
                 userScrollEnabled = false
             ) { pageIndex ->
                 when (BottomScreen.values()[pageIndex]) {
-                    BottomScreen.Message -> Message()
+                    BottomScreen.Message -> Message(drawerState)
                     BottomScreen.Contract -> Contract()
                     BottomScreen.Explore -> Explore()
                 }
